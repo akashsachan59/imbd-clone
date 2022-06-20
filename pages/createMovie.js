@@ -36,7 +36,7 @@ function createMovie() {
             }
             console.log(data)
 
-            const response = await fetch('http://localhost:3000/createMovie', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/createMovie`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

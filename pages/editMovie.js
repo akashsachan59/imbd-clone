@@ -42,7 +42,7 @@ function editMovie() {
             }
             console.log(data)
 
-            const response = await fetch('http://localhost:3000/edit', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/edit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

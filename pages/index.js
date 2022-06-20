@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Movie from '../components/Movie'
 
 export default function Home({data}) {
-  console.log(data)
+  // console.log(data)
   return (
     <div className='bg-black pb-5'>
       <Head>
@@ -21,7 +21,7 @@ export default function Home({data}) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:3000/').catch(err => console.log(err))
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}`).catch(err => console.log(err))
   const data = await res.json().catch(err => console.log(err))
 
   if (!data) {
